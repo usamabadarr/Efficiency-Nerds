@@ -2,6 +2,8 @@ function SignIn() {
   const username = document.getElementById('signInUsername').value;
   const password = document.getElementById('signInPassword').value;
 
+  console.log('Sign In button clicked!'); // Added
+
   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   if (currentUser) {
@@ -26,6 +28,8 @@ function SignUp() {
   const pronouns = document.getElementById("pronouns").value;
   const nerdyFact = document.getElementById("nerdyFact").value;
   const aboutMe = document.getElementById("aboutMe").value;
+
+  console.log('Create Account button clicked!');
 
   if (
     !firstName ||
@@ -55,6 +59,23 @@ function SignUp() {
     nerdyFact,
     aboutMe,
   };
+
+// Added ------>
+
+   // Retrieve existing users from localStorage or initialize empty array
+   let storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+   // Check if username already exists
+   const existingUser = storedUsers.find(user => user.username === username);
+   if (existingUser) {
+     alert("Username already exists. Please choose another one.");
+     return;
+   }
+ 
+   // Add new user to storedUsers array
+   storedUsers.push(user);
+
+   // Added ------>
 
   localStorage.setItem("currentUser", JSON.stringify(user));
 
