@@ -18,6 +18,9 @@ function SignIn() {
 }
 
 function SignUp() {
+
+  console.log('Create Account button clicked!');
+
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
   const username = document.getElementById("username").value;
@@ -28,8 +31,6 @@ function SignUp() {
   const pronouns = document.getElementById("pronouns").value;
   const nerdyFact = document.getElementById("nerdyFact").value;
   const aboutMe = document.getElementById("aboutMe").value;
-
-  console.log('Create Account button clicked!');
 
   if (
     !firstName ||
