@@ -61,23 +61,6 @@ function SignUp() {
     aboutMe,
   };
 
-// Added ------>
-
-   // Retrieve existing users from localStorage or initialize empty array
-   let storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-
-   // Check if username already exists
-   const existingUser = storedUsers.find(user => user.username === username);
-   if (existingUser) {
-     alert("Username already exists. Please choose another one.");
-     return;
-   }
- 
-   // Add new user to storedUsers array
-   storedUsers.push(user);
-
-   // Added ------>
-
   localStorage.setItem("currentUser", JSON.stringify(user));
 
   const signupMessage = document.getElementById("signupMessage");
