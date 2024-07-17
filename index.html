@@ -84,6 +84,7 @@
             <!-- Added -->
             
             <button type="button" onclick="SignUp()">Create Account</button>
+            <button class="signupForm" type="button">Create Account</button>
           </form>
           <div id="signupMessage" class="mt-3"></div>
         </div>
@@ -92,11 +93,13 @@
         <h4 class="display-5" >Already have an account?</h4>
         <div class="input-group flex-nowrap" id="signinPage">
           <form id="signinForm">
+            <form>
             <label for="signInUsername">Username:</label>
             <input type="text" id="signInUsername" name="signInUsername" required><br><br>
             <label for="signInPassword">Password:</label>
             <input type="password" id="signInPassword" name="signInPassword" required><br><br>
             <button type="button" onclick="SignIn()">Sign In</button>
+            <button class="signupForm" type="button">Sign In</button>
             <div class ='landinglogo'>
             <div>
               <img src="assets/images/EF.nerds.transparent.png" height=500px, display=flex, alt="Efficiency Nerds Logo" />
