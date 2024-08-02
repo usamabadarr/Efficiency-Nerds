@@ -1,26 +1,26 @@
 function SignIn() {
-  const username = document.getElementById('signInUsername').value;
-  const password = document.getElementById('signInPassword').value;
+  const username = document.getElementById("signInUsername").value;
+  const password = document.getElementById("signInPassword").value;
 
-  console.log('Sign In button clicked!'); // Added
-
-  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (currentUser) {
-    if (username === currentUser.username && password === currentUser.password) {
-      window.location.href = 'profilet-test.html'; // Redirect to the profile page
+    if (
+      username === currentUser.username &&
+      password === currentUser.password
+    ) {
+      window.location.href = "profilet-test.html"; // Redirect to the profile page
     } else {
-      document.getElementById('signinMessage').innerText = 'Invalid username or password';
+      document.getElementById("signinMessage").innerText =
+        "Invalid username or password";
     }
   } else {
-    document.getElementById('signinMessage').innerText = 'No user found. Please sign up first.';
+    document.getElementById("signinMessage").innerText =
+      "No user found. Please sign up first.";
   }
 }
 
 function SignUp() {
-
-  console.log('Create Account button clicked!');
-
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
   const username = document.getElementById("username").value;
